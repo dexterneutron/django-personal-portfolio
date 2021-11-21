@@ -1,1 +1,8 @@
-hello blogs
+<H1>LATEST POST</H1>
+
+{% for post in blog %}
+<a href="{% url 'blog:detail' post.id %}">{{ post.title }}</a>
+<p> {{ post.description }} </p>
+<p> {{ post.date }} </p>
+
+{% endfor %}
